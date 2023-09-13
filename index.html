@@ -5,25 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <!-- https://unpkg.com/animejs@3.2.1/lib/anime.min.js -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mithril/1.1.3/mithril.min.js"></script> -->
     <script src="scripts.js"></script>
     <title>Arkadiusz GUBAŁA - Portfolio</title>
 </head>
 <body>
-
+    
     <div id="grid-container">
+
+        <nav id="popUpMenu">
+
+        </nav>
+
+
+            
         <header>
+            <input class="dot-menu_checkbox" id="dot-menu" type="checkbox"></input>
+            <label class="dot-menu_label" for="dot-menu">
+              <span>Menu</span>
+            </label>
+              
             <ul>
-                <li onclick="load_contact()">contact</li>
-                <li onclick="load_experience()">experience</li>
-                <li onclick="load_projects()">projects</li>
-                <li onclick="load_about()">about</li>
-                <li onclick="load_home()">home</li>
+                <li onclick="load_content('experience')">experience</li>
+                <li onclick="load_content('projects')">projects</li>
+                <li onclick="load_content('about')">about</li>
+                <li onclick="load_content('welcome')">home</li>
             </ul>
         </header>
+
 
         <div id="sideColumn">
             <div id="sideContent">

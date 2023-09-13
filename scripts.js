@@ -1,4 +1,22 @@
-$(window).on("load", load_home);
+var currentState = "welcome";
+
+$(document).ready(function() {
+    const menuCheck = document.getElementById("dot-menu");
+    menuCheck.addEventListener("click", () => {
+        if (menuCheck.checked) {
+            document.getElementById("sideColumn").style.visibility = "hidden";
+            document.getElementsByTagName("footer")[0].style.visibility = "hidden";
+            load_menu();
+        } else {
+            document.getElementById("sideColumn").style.visibility = "visible";
+            document.getElementsByTagName("footer")[0].style.visibility = "visible";
+            load_content(currentState);
+        }
+    });
+
+    load_content(currentState);
+});
+
 
 // Animated letters in left side panel
 function animate_side() {
@@ -13,66 +31,42 @@ function animate_side() {
         scaleX: [0.3, 1],
         easing: "easeOutBack",
         duration: 1000,
-        delay: (el, i) => 150 + 50 * i
+        delay: (el, i) => 100 + 50 * i
     });
 };
 
 
-// Load "home" content
-function load_home() {
-    $("#sideContent").html(`welcome`);
-    animate_side();
-    
-    // $("#mainContent").html(`
-    //     Hi! I'm Arek!
-    //     <br>
-    //     Some text.
-    // `);    
-    $("#mainContent").load("./home.html");
+// Load menu
+function load_menu() {    
+    $("#mainContent").load("./menu.html");
 };
 
-// Load "about" content
-function load_about() {
-    $("#sideContent").html(`about me`);
+
+function load_content(contentName) {
+    switch(contentName) {
+        case "welcome":
+            $("#sideContent").html(contentName);
+            $("#mainContent").load(`./${contentName}.html`);
+            break;
+        case "about":
+            $("#sideContent").html(contentName);
+            $("#mainContent").load(`./${contentName}.html`);
+            break;
+        case "projects":
+            $("#sideContent").html(contentName);
+            $("#mainContent").load(`./${contentName}.html`);
+            break;
+        case "experience":
+            $("#sideContent").html(contentName);
+            $("#mainContent").load(`./${contentName}.html`);
+            break;
+        case "welcome":
+            $("#sideContent").html(contentName);
+            $("#mainContent").load(`./${contentName}.html`);
+            break;
+        // default:
+        //     break;
+    }
     animate_side();
-
-    $("#mainContent").html(`
-        Something about me...
-    `);
-};
-
-// Load "projects" content
-function load_projects() {
-    $("#sideContent").html(`projects`);
-    animate_side();
-
-    $("#mainContent").html(`
-        Some things I've built:
-        <ul>
-            <li>PDF-Describer</li>
-            <li>TechCreator</li>
-            <li>Battleship</li>
-        </ul>
-    `);
-};
-
-// Load "experience" content
-function load_experience() {    
-    $("#sideContent").html(`experience`);
-    animate_side();
-
-    $("#mainContent").html(`
-        Pre-development jobs... (something about the past)<br>
-        I work as a Junior C# developer.
-    `);
-};
-
-// Load "contact" content
-function load_contact() {    
-    $("#sideContent").html(`contact`);
-    animate_side();
-
-    $("#mainContent").html(`
-        Contact me. :)
-    `);
+    currentState = contentName;
 };
