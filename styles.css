@@ -13,6 +13,7 @@ html, body {
   background-image: linear-gradient(#030517, #161a3d);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 #grid-container {
@@ -30,36 +31,12 @@ header {
   margin-right: 20px;
 }
 
-@media (max-width: 550px) {
-  header ul {
-    display: none;
-    position: absolute;
-    width: 100%;
-  }
-
-  header ul {
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  header li {
-    display: block;
-    margin: 10px 0;
-  }
-}
-
-@media (min-width: 551px) {
-    header .dot-menu_checkbox, header .dot-menu_label {
-      display: none;
-    }
-}
-
 #mainContent {
   color: var(--fontColor);
   text-align: right;
   border: yellow 1px solid;
   margin-right: 80px;
-  height: 100%;
+  height: 80%;
 }
 
 #mainColumn {
@@ -86,14 +63,6 @@ header {
   grid-area: 2 / 1 / 3 / 2;
   border: var(--tempBorders);
 }
-
-/* 
-TODO:
-sideContent & sideColumn - obsłużyć wąskie ekrany
-<900 - dynamiczne zawężanie kolumny
-<650 lub <600 - kolumna znika i wskakuje pod header
-*/
-
 
 .letter {
   display: inline-block;
@@ -149,7 +118,7 @@ li {
   text-decoration: none;
 }
 
-li:hover, footer svg:hover {
+li:hover, footer svg:hover, #popUpMenu div:hover {
   color: var(--hoverColor);
   transition: var(--hoverTransition);
   -webkit-transition: var(--hoverTransition);
@@ -176,10 +145,19 @@ li:hover, footer svg:hover {
 #popUpMenu {
   border: var(--tempBorders);
   grid-area: 2 / 1 / 4 / 3;
-  background-color: green;
+  background-color: #030517;
   visibility: hidden;
+  z-index: 1;
 }
 
+
+#popUpMenu li {
+  float: none;
+  display: block;
+  text-align: center;
+  margin-left: 25%;
+  width: 50%;
+}
 
 
 
@@ -230,3 +208,33 @@ li:hover, footer svg:hover {
   transform-origin: center center;
   width: 60%;
 }
+
+
+/* RESPONSIVENESS */
+
+@media (max-width: 550px) {
+  header ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 551px) {
+    header .dot-menu_checkbox, header .dot-menu_label {
+      display: none;
+    }
+
+    #popUpMenu {
+      visibility: hidden;
+    }
+}
+
+/* 
+TODO:
+sideContent & sideColumn - obsłużyć wąskie ekrany
+<900 - dynamiczne zawężanie kolumny
+<650 lub <600 - kolumna znika i wskakuje pod header
+*/

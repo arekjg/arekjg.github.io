@@ -15,9 +15,14 @@
     
     <div id="grid-container">
 
-        <nav id="popUpMenu">
-
-        </nav>
+        <div id="popUpMenu">
+            <ul>
+                <li onclick="load_content('welcome', true)">home</li>
+                <li onclick="load_content('about', true)">about</li>
+                <li onclick="load_content('projects', true)">projects</li>
+                <li onclick="load_content('experience', true)">experience</li>
+            </ul>
+        </div>
 
 
             
@@ -28,10 +33,10 @@
             </label>
               
             <ul>
-                <li onclick="load_content('experience')">experience</li>
-                <li onclick="load_content('projects')">projects</li>
-                <li onclick="load_content('about')">about</li>
-                <li onclick="load_content('welcome')">home</li>
+                <li onclick="load_content('experience', false)">experience</li>
+                <li onclick="load_content('projects', false)">projects</li>
+                <li onclick="load_content('about', false)">about</li>
+                <li onclick="load_content('welcome', false)">home</li>
             </ul>
         </header>
 

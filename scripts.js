@@ -6,19 +6,30 @@ $(document).ready(function() {
         if (menuCheck.checked) {
             document.getElementById("sideColumn").style.visibility = "hidden";
             document.getElementsByTagName("footer")[0].style.visibility = "hidden";
-            load_menu();
+            animate_menu();
         } else {
             document.getElementById("sideColumn").style.visibility = "visible";
             document.getElementsByTagName("footer")[0].style.visibility = "visible";
-            load_content(currentState);
+            animate_menu();
         }
     });
 
-    load_content(currentState);
+    // window.addEventListener("resize", function() {
+    //     if (window.matchMedia("(min-width: 551px)").matches) {
+    //         if (document.getElementById("dot-menu").checked === true) {
+    //             document.getElementById("dot-menu").checked = false;
+    //         }
+    //         console.log(`checked ${document.getElementById("dot-menu").checked}`);
+    //     }
+    // }, true);
+    load_content(currentState, false);
 });
 
 
-// Animated letters in left side panel
+
+
+
+// Animate letters in left side panel
 function animate_side() {
     var textWrapper = document.querySelector("#sideContent");
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<div class='letter'>$&</div>");
@@ -36,13 +47,32 @@ function animate_side() {
 };
 
 
-// Load menu
-function load_menu() {    
-    $("#mainContent").load("./menu.html");
+function animate_menu() {
+    const menuWrapper = this.document.getElementById("popUpMenu");
+    let delay = 800;
+    if (menuWrapper.style.visibility === "visible") {
+        anime({
+            targets: '#popUpMenu',
+            opacity: [1,0],
+            easing: "easeOutQuad",
+            duration: delay
+        });
+        setTimeout(() => {
+            menuWrapper.style.visibility = "hidden";
+        }, delay);
+    } else {
+        menuWrapper.style.visibility = "visible";
+        anime({
+            targets: '#popUpMenu',
+            opacity: [0,1],
+            easing: "easeOutQuad",
+            duration: delay
+        });
+    }
 };
 
 
-function load_content(contentName) {
+function load_content(contentName, flag) {
     switch(contentName) {
         case "welcome":
             $("#sideContent").html(contentName);
@@ -69,4 +99,9 @@ function load_content(contentName) {
     }
     animate_side();
     currentState = contentName;
+
+    if (flag) {
+        const menuCheck = document.getElementById("dot-menu");
+        menuCheck.click();
+    }
 };
