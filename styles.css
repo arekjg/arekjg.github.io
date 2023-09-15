@@ -14,12 +14,13 @@ html, body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #grid-container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 170px 1fr;
+  grid-template-columns: 160px 1fr;
   grid-template-rows: 80px 1fr 70px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -35,14 +36,21 @@ header {
   color: var(--fontColor);
   text-align: right;
   border: yellow 1px solid;
-  margin-right: 80px;
-  height: 80%;
+  margin-right: 15%;
+  height: 99%;
 }
 
 #mainColumn {
   grid-area: 2 / 2 / 3 / 3;
   border: var(--tempBorders);
+
+  
 }
+
+
+
+
+
 
 #sideContent {
   transform: rotate(-90deg);
@@ -50,13 +58,14 @@ header {
   -webkit-text-stroke-color: var(--fontColor);
   color: transparent;
   font-size: 25px;
-  margin-top: 180px;
-  margin-left: 30px;
+  top: 150px;
+  left: 50px;
   position: relative;
   border: var(--tempBorders);
   text-align: right;
   letter-spacing: 5px;
   width: 200px;
+  float: right;
 }
 
 #sideColumn {
@@ -223,18 +232,38 @@ li:hover, footer svg:hover, #popUpMenu div:hover {
 }
 
 @media (min-width: 551px) {
-    header .dot-menu_checkbox, header .dot-menu_label {
-      display: none;
-    }
+  header .dot-menu_checkbox, header .dot-menu_label {
+    display: none;
+  }
 
-    #popUpMenu {
-      visibility: hidden;
-    }
+  #popUpMenu {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 1000px) {
+  #grid-container {
+    grid-template-columns: 16% 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  #grid-container {
+    grid-template-columns: 0 1fr;
+  }
+}
+
+@media (max-height: 380px) {
+  #sideContent {
+    display: none;
+  }
 }
 
 /* 
 TODO:
 sideContent & sideColumn - obsłużyć wąskie ekrany
-<900 - dynamiczne zawężanie kolumny
+<1000 - dynamiczne zawężanie kolumny (16%)
 <650 lub <600 - kolumna znika i wskakuje pod header
+
+ogarnąć wymiar w pionie
 */
