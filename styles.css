@@ -37,7 +37,7 @@ header {
   text-align: right;
   border: yellow 1px solid;
   margin-right: 15%;
-  height: 99%;
+  height: 90%;
 }
 
 #mainColumn {
@@ -77,6 +77,18 @@ header {
   display: inline-block;
 }
 
+
+
+p span {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 2px;
+}
+
+p span:hover {
+  color: white;
+  font-weight: bold;
+}
 
 /* FOOTER  */
 

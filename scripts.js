@@ -49,7 +49,7 @@ function animate_side() {
 
 function animate_menu() {
     const menuWrapper = this.document.getElementById("popUpMenu");
-    let delay = 800;
+    let delay = 700;
     if (menuWrapper.style.visibility === "visible") {
         anime({
             targets: '#popUpMenu',
