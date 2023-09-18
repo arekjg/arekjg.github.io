@@ -4,11 +4,11 @@ $(document).ready(function() {
     const menuCheck = document.getElementById("dot-menu");
     menuCheck.addEventListener("click", () => {
         if (menuCheck.checked) {
-            document.getElementById("sideColumn").style.visibility = "hidden";
+            document.getElementById("side-column").style.visibility = "hidden";
             document.getElementsByTagName("footer")[0].style.visibility = "hidden";
             animate_menu();
         } else {
-            document.getElementById("sideColumn").style.visibility = "visible";
+            document.getElementById("side-column").style.visibility = "visible";
             document.getElementsByTagName("footer")[0].style.visibility = "visible";
             animate_menu();
         }
@@ -31,11 +31,11 @@ $(document).ready(function() {
 
 // Animate letters in left side panel
 function animate_side() {
-    var textWrapper = document.querySelector("#sideContent");
+    var textWrapper = document.querySelector("#side-content");
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<div class='letter'>$&</div>");
 
     anime({
-        targets: '#sideContent .letter',
+        targets: '#side-content .letter',
         opacity: [0,1],
         translateX: [40,0],
         translateZ: 0,
@@ -48,11 +48,11 @@ function animate_side() {
 
 
 function animate_menu() {
-    const menuWrapper = this.document.getElementById("popUpMenu");
+    const menuWrapper = this.document.getElementById("dropdown-menu");
     let delay = 700;
     if (menuWrapper.style.visibility === "visible") {
         anime({
-            targets: '#popUpMenu',
+            targets: '#dropdown-menu',
             opacity: [1,0],
             easing: "easeOutQuad",
             duration: delay
@@ -63,7 +63,7 @@ function animate_menu() {
     } else {
         menuWrapper.style.visibility = "visible";
         anime({
-            targets: '#popUpMenu',
+            targets: '#dropdown-menu',
             opacity: [0,1],
             easing: "easeOutQuad",
             duration: delay
@@ -75,24 +75,24 @@ function animate_menu() {
 function load_content(contentName, flag) {
     switch(contentName) {
         case "welcome":
-            $("#sideContent").html(contentName);
-            $("#mainContent").load(`./${contentName}.html`);
+            $("#side-content").html(contentName);
+            $("#main-content").load(`Components/${contentName}.html`);
             break;
         case "about":
-            $("#sideContent").html(contentName);
-            $("#mainContent").load(`./${contentName}.html`);
+            $("#side-content").html(contentName);
+            $("#main-content").load(`Components/${contentName}.html`);
             break;
         case "projects":
-            $("#sideContent").html(contentName);
-            $("#mainContent").load(`./${contentName}.html`);
+            $("#side-content").html(contentName);
+            $("#main-content").load(`Components/${contentName}.html`);
             break;
         case "experience":
-            $("#sideContent").html(contentName);
-            $("#mainContent").load(`./${contentName}.html`);
+            $("#side-content").html(contentName);
+            $("#main-content").load(`Components/${contentName}.html`);
             break;
         case "welcome":
-            $("#sideContent").html(contentName);
-            $("#mainContent").load(`./${contentName}.html`);
+            $("#side-content").html(contentName);
+            $("#main-content").load(`Components/${contentName}.html`);
             break;
         // default:
         //     break;

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit" type="text/css">
+    <!-- <link rel="stylesheet" href="Styles/scrollbar.css" type="text/css"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="scripts.js"></script>
@@ -15,7 +16,7 @@
     
     <div id="grid-container">
 
-        <div id="popUpMenu">
+        <div id="dropdown-menu">
             <ul>
                 <li onclick="load_content('welcome', true)">home</li>
                 <li onclick="load_content('about', true)">about</li>
@@ -41,14 +42,14 @@
         </header>
 
 
-        <div id="sideColumn">
-            <div id="sideContent">
+        <div id="side-column">
+            <div id="side-content">
                 <!-- CONTENT OF LEFT SIDE PANEL -->
             </div>
         </div>
 
-        <div id="mainColumn">
-            <div id="mainContent">
+        <div id="main-column">
+            <div id="main-content">
                 <!-- CONTENT OF LOADED COMPONENT -->
             </div>
         </div>
