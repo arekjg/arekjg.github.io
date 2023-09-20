@@ -34,23 +34,18 @@ header {
 
 #main-content {
   color: var(--fontColor);
-  text-align: right;
-  border: yellow 1px solid;
-  margin-right: 15%;
-  height: 90%;
+  text-align: left;
+  border: var(--tempBorders);
+  margin: 10% 15% 10% 15%;
+  line-height: 1.6;
 }
+
+
 
 #main-column {
   grid-area: 2 / 2 / 3 / 3;
   border: var(--tempBorders);
-
-  
 }
-
-
-
-
-
 
 #side-content {
   transform: rotate(-90deg);
@@ -78,7 +73,6 @@ header {
 }
 
 
-
 p span {
   text-decoration: underline;
   text-decoration-style: solid;
@@ -88,10 +82,6 @@ p span {
 p span:hover {
   color: white;
   font-weight: bold;
-}
-
-.txt {
-  line-height: 1.6;
 }
 
 /* FOOTER  */
@@ -156,7 +146,8 @@ li:hover, footer svg:hover, #dropdown-menu div:hover {
 
 #welcome {
   border: var(--tempBorders);
-  margin: 20% 10% 20% 10%;
+  /* margin: 20% 10% 20% 10%; */
+  height: 100%;
   text-align: left;
 }
 
@@ -274,12 +265,3 @@ li:hover, footer svg:hover, #dropdown-menu div:hover {
     display: none;
   }
 }
-
-/* 
-TODO:
-side-content & side-column - obsłużyć wąskie ekrany
-<1000 - dynamiczne zawężanie kolumny (16%)
-<650 lub <600 - kolumna znika i wskakuje pod header
-
-ogarnąć wymiar w pionie
-*/

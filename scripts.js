@@ -73,30 +73,12 @@ function animate_menu() {
 
 
 function load_content(contentName, flag) {
-    switch(contentName) {
-        case "welcome":
-            $("#side-content").html(contentName);
-            $("#main-content").load(`Components/${contentName}.html`);
-            break;
-        case "about":
-            $("#side-content").html(contentName);
-            $("#main-content").load(`Components/${contentName}.html`);
-            break;
-        case "projects":
-            $("#side-content").html(contentName);
-            $("#main-content").load(`Components/${contentName}.html`);
-            break;
-        case "experience":
-            $("#side-content").html(contentName);
-            $("#main-content").load(`Components/${contentName}.html`);
-            break;
-        case "welcome":
-            $("#side-content").html(contentName);
-            $("#main-content").load(`Components/${contentName}.html`);
-            break;
-        // default:
-        //     break;
-    }
+    $("#side-content").html(contentName);
+    $("#main-content").load(`Components/${contentName}.html`);
+    var contentDiv = document.getElementById("main-content");
+    contentDiv.className = "";
+    contentDiv.classList.add(`${contentName}-container`);
+
     animate_side();
     currentState = contentName;
 
