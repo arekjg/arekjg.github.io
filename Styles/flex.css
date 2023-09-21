@@ -1,37 +1,39 @@
 .about-container {
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
 }
 
 .about-container > * {
     flex: 1 100%;
 }
 
-@media all and (min-width: 600px) {
-    .about-text, .image {
-        flex: 1 0 0;
-    }
-}
-
-@media all and (min-width: 800px) {
+@media all and (min-width: 850px) {
     .about-text {
+        flex: 2 0 0;
         order: 1;
     }
-.image {
+    .image {
+        flex: 1 0 0;
         order: 2;
-    }
-.resume {
-        order: 3;
     }
 }
 
+/* .about-text {
+    position: relative;
+} */
 
-.about-text {
+.about-text p, .about-text .resume {
     text-align: justify;
     text-justify: inter-word;
 }
 
 .resume {
-    align-self: center;
-    border: green 1px solid;
+    border: yellow 1px solid;
+    
+}
+
+.image {
+    text-align: center;
+    /* margin-top: 100px; */
 }

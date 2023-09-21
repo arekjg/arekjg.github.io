@@ -36,11 +36,21 @@ header {
   color: var(--fontColor);
   text-align: left;
   border: var(--tempBorders);
-  margin: 10% 15% 10% 15%;
   line-height: 1.6;
 }
 
-
+#main-content.welcome-container {
+  margin: 15% 20% 20% 25%;
+}
+#main-content.about-container {
+  margin: 10% 5% 10% 10%;
+}
+#main-content.projects-container {
+  margin: 4% 3% 2% 5%;
+}
+#main-content.experience-container {
+  margin: 5% 20% 20% 25%;
+}
 
 #main-column {
   grid-area: 2 / 2 / 3 / 3;
@@ -73,19 +83,18 @@ header {
 }
 
 
-p span {
+p .link {
   text-decoration: underline;
   text-decoration-style: solid;
   text-underline-offset: 2px;
 }
 
-p span:hover {
+p .link:hover {
   color: white;
   font-weight: bold;
 }
 
 /* FOOTER  */
-
 footer {
   grid-area: 3 / 1 / 4 / 3;
   border: var(--tempBorders);
@@ -142,20 +151,12 @@ li:hover, footer svg:hover, #dropdown-menu div:hover {
 }
 
 
-/* PAGES */
-
-#welcome {
-  border: var(--tempBorders);
-  /* margin: 20% 10% 20% 10%; */
-  height: 100%;
-  text-align: left;
-}
-
 #name {
   font-size: 36px;
   font-family: "Kanit";
   font-weight: bold;
   letter-spacing: 4px;
+  line-height: 1.3;
 }
 
 #dropdown-menu {

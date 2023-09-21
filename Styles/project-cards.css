@@ -1,0 +1,49 @@
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+}
+
+.card:hover {
+    transition: var(--hoverTransition);
+    -webkit-transition: var(--hoverTransition);
+    cursor: pointer;
+    scale: 1.08;
+}
+
+@keyframes changeColor {
+    from {
+        color: #ccc;
+        font-weight: normal;
+    }
+    to {
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+.card:hover > #det {
+    animation: changeColor 0.5s infinite alternate
+}
+
+.card h2 {
+    text-align: center;
+}
+
+#det {
+    font-size: 10px;
+    bottom: 0;
+    left: 32%;
+    position: absolute;
+}
