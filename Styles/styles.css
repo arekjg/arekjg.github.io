@@ -40,16 +40,16 @@ header {
 }
 
 #main-content.welcome-container {
-  margin: 15% 20% 20% 25%;
+  margin: 15% 20% 0% 25%;
 }
 #main-content.about-container {
-  margin: 10% 5% 10% 10%;
+  margin: 10% 5% 0% 10%;
 }
 #main-content.projects-container {
-  margin: 4% 3% 2% 5%;
+  margin: 4% 3% 0% 5%;
 }
 #main-content.experience-container {
-  margin: 5% 20% 20% 25%;
+  margin: 5% 20% 0% 25%;
 }
 
 #main-column {
@@ -63,7 +63,7 @@ header {
   -webkit-text-stroke-color: var(--fontColor);
   color: transparent;
   font-size: 25px;
-  top: 150px;
+  top: 40%;
   left: 50px;
   position: relative;
   border: var(--tempBorders);
@@ -150,7 +150,6 @@ li:hover, footer svg:hover, #dropdown-menu div:hover {
   scale: 1.2;
 }
 
-
 #name {
   font-size: 36px;
   font-family: "Kanit";
@@ -166,7 +165,6 @@ li:hover, footer svg:hover, #dropdown-menu div:hover {
   visibility: hidden;
   z-index: 1;
 }
-
 
 #dropdown-menu li {
   float: none;
@@ -237,6 +235,17 @@ li:hover, footer svg:hover, #dropdown-menu div:hover {
     text-align: center;
     padding: 10px 0;
   }
+
+  #grid-container {
+    grid-template-columns: 0 1fr;
+  }
+
+  #main-content.welcome-container {
+    margin: 15% 5% 20% 8%;
+  }
+  #main-content.about-container {
+    margin: 10% 0% 10% 6%;
+  }
 }
 
 @media (min-width: 551px) {
@@ -249,15 +258,9 @@ li:hover, footer svg:hover, #dropdown-menu div:hover {
   }
 }
 
-@media (min-width: 550px) and (max-width: 1000px) {
+@media (min-width: 551px) and (max-width: 1000px) {
   #grid-container {
     grid-template-columns: 16% 1fr;
-  }
-}
-
-@media (max-width: 550px) {
-  #grid-container {
-    grid-template-columns: 0 1fr;
   }
 }
 
@@ -265,4 +268,26 @@ li:hover, footer svg:hover, #dropdown-menu div:hover {
   #side-content {
     display: none;
   }
+}
+
+
+
+
+
+
+.resume {
+  border: yellow 1px solid;
+  /* position: absolute; */
+  left: auto;
+  width: 70px;
+  text-align: center;
+}
+
+.welcome-container p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.experience-container {
+  text-align: center;
 }

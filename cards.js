@@ -2,7 +2,7 @@ if (typeof cardsData === 'undefined'){
     var cardsData = [
         {
             projectName: 'PDF-Describer',
-            description: 'Content for Card 1',
+            description: 'Python app that takes data from CSV file and inserts it to PDF file',
             details: 'long description of an application',
             status: 'closed',
             tech: 'Python, VBA',
@@ -11,7 +11,7 @@ if (typeof cardsData === 'undefined'){
         },
         {
             projectName: 'TechCreator',
-            description: 'Content for Card 2',
+            description: 'WPF app that simplifies creating production schemas for IPOsystem (Intelligent Prodcution Organizing system)',
             details: 'long description of an application',
             status: 'closed',
             tech: 'C#, WPF',
@@ -20,7 +20,7 @@ if (typeof cardsData === 'undefined'){
         },
         {
             projectName: 'Battleship',
-            description: 'Content for Card 3',
+            description: 'Battleship game written in JS, final project in the CS50\'s Introduction to Computer Science course',
             details: 'long description of an application',
             status: 'closed',
             tech: 'HTML, CSS, JavaScript',
@@ -29,7 +29,7 @@ if (typeof cardsData === 'undefined'){
         },
         {
             projectName: 'ActivityManager',
-            description: 'Content for Card 4',
+            description: 'WPF app for adding, deleting and viewing data from SQL database.',
             details: 'long description of an application',
             status: 'in progress',
             tech: 'C#, WPF, MS SQL, EFCore',
@@ -38,7 +38,7 @@ if (typeof cardsData === 'undefined'){
         },
         {
             projectName: 'GitHubStats',
-            description: 'Content for Card 4',
+            description: 'Console .NET app that communicates with GitHub API and provides user statistics to be included in "readme" file',
             details: 'long description of an application',
             status: 'in progress',
             tech: 'C#, Python, WebAPI',
@@ -48,16 +48,22 @@ if (typeof cardsData === 'undefined'){
     ];
 }
 
+
+// function expand() {
+//     console.log('clicked');
+// }
+
 function renderCards(data) {
     const cardContainer = document.getElementsByClassName('projects-container')[0];
 
     data.forEach((card) => {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
+        // $('.card').click(expand);
         cardElement.innerHTML = `
             <h2>${card.projectName}</h2>
             <p>${card.description}</p>
-            <p>Tech: ${card.tech}</p>
+            <p id="tech">Tech:<br>${card.tech}</p>
             <p id="det"> click to see details </p>
         `;
         cardContainer.appendChild(cardElement);

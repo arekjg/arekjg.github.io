@@ -1,3 +1,7 @@
+:root {
+    --card-width: 250px;
+}
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -5,9 +9,9 @@
 }
 
 .card {
-    width: 250px;
-    height: 300px;
-    margin: 10px;
+    width: var(--card-width);
+    height: 280px;
+    margin: 8px;
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -37,13 +41,25 @@
     animation: changeColor 0.5s infinite alternate
 }
 
-.card h2 {
+.card h2, .card p {
     text-align: center;
+}
+
+#det, #tech {
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--card-width);
+    position: absolute;
 }
 
 #det {
     font-size: 10px;
     bottom: 0;
-    left: 32%;
-    position: absolute;
 }
+
+#tech {
+    bottom: 15px;
+}
+
+
+/* expanded card */
