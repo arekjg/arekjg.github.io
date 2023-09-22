@@ -31,7 +31,7 @@ if (typeof cardsData === 'undefined'){
             projectName: 'ActivityManager',
             description: 'WPF app for adding, deleting and viewing data from SQL database.',
             details: 'long description of an application',
-            status: 'in progress',
+            status: 'in development',
             tech: 'C#, WPF, MS SQL, EFCore',
             github: 'github-url',
             website: 'website-url'
@@ -40,7 +40,7 @@ if (typeof cardsData === 'undefined'){
             projectName: 'GitHubStats',
             description: 'Console .NET app that communicates with GitHub API and provides user statistics to be included in "readme" file',
             details: 'long description of an application',
-            status: 'in progress',
+            status: 'in development',
             tech: 'C#, Python, WebAPI',
             github: 'github-url',
             website: 'website-url'
@@ -63,7 +63,7 @@ function renderCards(data) {
         cardElement.innerHTML = `
             <h2>${card.projectName}</h2>
             <p>${card.description}</p>
-            <p id="tech">Tech:<br>${card.tech}</p>
+            <p id="tech">Status: <b>${card.status}</b><br>Tech: <b>${card.tech}</b></p>
             <p id="det"> click to see details </p>
         `;
         cardContainer.appendChild(cardElement);

@@ -14,20 +14,8 @@ $(document).ready(function() {
         }
     });
 
-    // window.addEventListener("resize", function() {
-    //     if (window.matchMedia("(min-width: 551px)").matches) {
-    //         if (document.getElementById("dot-menu").checked === true) {
-    //             document.getElementById("dot-menu").checked = false;
-    //         }
-    //         console.log(`checked ${document.getElementById("dot-menu").checked}`);
-    //     }
-    // }, true);
     load_content(currentState, false);
 });
-
-
-
-
 
 // Animate letters in left side panel
 function animate_side() {
@@ -45,7 +33,6 @@ function animate_side() {
         delay: (el, i) => 100 + 50 * i
     });
 };
-
 
 function animate_menu() {
     const menuWrapper = this.document.getElementById("dropdown-menu");
@@ -72,6 +59,19 @@ function animate_menu() {
 };
 
 
+// Animate content
+function animate_content() {
+    anime({
+        targets: '#main-content',
+        opacity: [0,1],
+        translateY: [-60,0],
+        easing: "easeOutQuad",
+        duration: 1000,
+        delay: 200
+    });
+};
+
+
 function load_content(contentName, flag) {
     $("#side-content").html(contentName);
     $("#main-content").load(`Components/${contentName}.html`);
@@ -80,6 +80,7 @@ function load_content(contentName, flag) {
     contentDiv.classList.add(`${contentName}-container`);
 
     animate_side();
+    animate_content();
     currentState = contentName;
 
     if (flag) {
@@ -87,3 +88,5 @@ function load_content(contentName, flag) {
         menuCheck.click();
     }
 };
+
+

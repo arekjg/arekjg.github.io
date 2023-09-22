@@ -10,7 +10,7 @@
 
 .card {
     width: var(--card-width);
-    height: 280px;
+    height: 310px;
     margin: 8px;
     padding: 10px;
     border: 1px solid #ccc;
