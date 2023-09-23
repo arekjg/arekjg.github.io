@@ -12,7 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="scripts.js"></script>
-    <!-- <script src="cards.js"></script> -->
     <title>Arkadiusz GUBAŁA - Portfolio</title>
 </head>
 <body>
@@ -21,10 +20,10 @@
 
         <div id="dropdown-menu">
             <ul>
-                <li onclick="load_content('welcome', true)">home</li>
-                <li onclick="load_content('about', true)">about</li>
-                <li onclick="load_content('projects', true)">projects</li>
-                <li onclick="load_content('experience', true)">experience</li>
+                <li class="scale-item" onclick="load_content('welcome', true)">home</li>
+                <li class="scale-item" onclick="load_content('about', true)">about</li>
+                <li class="scale-item" onclick="load_content('projects', true)">projects</li>
+                <li class="scale-item" onclick="load_content('experience', true)">experience</li>
             </ul>
         </div>
 
@@ -37,10 +36,10 @@
             </label>
               
             <ul>
-                <li onclick="load_content('experience', false)">experience</li>
-                <li onclick="load_content('projects', false)">projects</li>
-                <li onclick="load_content('about', false)">about</li>
-                <li onclick="load_content('welcome', false)">home</li>
+                <li class="scale-item" onclick="load_content('experience', false)">experience</li>
+                <li class="scale-item" onclick="load_content('projects', false)">projects</li>
+                <li class="scale-item" onclick="load_content('about', false)">about</li>
+                <li class="scale-item" onclick="load_content('welcome', false)">home</li>
             </ul>
         </header>
 
@@ -59,7 +58,7 @@
 
         <footer>
             <a href="https://github.com/arekjg" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                <svg class="scale-item" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <title>GitHub</title>
                     <path
@@ -69,7 +68,7 @@
             </a>
 
             <a href="https://www.linkedin.com/in/arekjg" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                <svg class="scale-item" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <title>LinkedIn</title>
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>

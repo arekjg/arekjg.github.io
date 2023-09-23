@@ -79,10 +79,11 @@ function load_content(contentName, flag) {
     contentDiv.className = "";
     contentDiv.classList.add(`${contentName}-container`);
 
+    
     animate_side();
     animate_content();
     currentState = contentName;
-
+    
     if (flag) {
         const menuCheck = document.getElementById("dot-menu");
         menuCheck.click();
@@ -90,3 +91,15 @@ function load_content(contentName, flag) {
 };
 
 
+
+// experience
+if (typeof expData === 'undefined'){
+    var expData = [
+        `<p>Gunpowder, also commonly known as black powder to distinguish it from modern smokeless powder, is the earliest known chemical explosive. It consists of a mixture of sulfur, carbon (in the form of charcoal), and potassium nitrate (saltpeter). The sulfur and carbon act as fuels while the saltpeter is an oxidizer.</p>`,
+        `<p>A castle is a type of fortified structure built during the Middle Ages predominantly by the nobility or royalty and by military orders. Scholars usually consider a castle to be the private fortified residence of a lord or noble. This is distinct from a mansion, palace and villa, whose main purpose was exclusively for pleasance and are not primarily fortresses but may be fortified.</p>`
+    ];
+}
+
+function load_exp(id) {
+    $(".exp-content").html(expData[id]);
+};

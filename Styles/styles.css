@@ -3,7 +3,7 @@
   --fontColor: #c2c2c2;
   --hoverColor: #ffffff;
   --hoverTransition: all .7s ease;
-  --tempBorders: red 1px solid;
+  /* --tempBorders: red 1px solid; */
 }
 
 html, body {
@@ -39,6 +39,7 @@ header {
   line-height: 1.6;
 }
 
+
 #main-content.welcome-container {
   margin: 15% 20% 0% 25%;
 }
@@ -49,8 +50,23 @@ header {
   margin: 4% 3% 0% 5%;
 }
 #main-content.experience-container {
-  margin: 5% 20% 0% 25%;
+  margin: 15% 7% 0% 6%;
 }
+@media (min-width: 1000px) {
+  #main-content.welcome-container {
+    margin: 15% auto 0% auto;
+    width: 445px;
+  }
+  #main-content.about-container {
+    margin: 10% auto 0% auto;
+    width: 690px;
+  }
+  #main-content.experience-container {
+    margin: 15% auto 0% auto;
+    width: 750px;
+  }
+}
+
 
 #main-column {
   grid-area: 2 / 2 / 3 / 3;
@@ -142,7 +158,7 @@ li {
   text-decoration: none;
 }
 
-li:hover, footer svg:hover, #dropdown-menu div:hover {
+.scale-item:hover {
   color: var(--hoverColor);
   transition: var(--hoverTransition);
   -webkit-transition: var(--hoverTransition);
@@ -291,3 +307,66 @@ li:hover, footer svg:hover, #dropdown-menu div:hover {
 .experience-container {
   text-align: center;
 }
+
+
+
+
+
+/* exp */
+
+.experience-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.exp-list {
+  width: 210px;
+  height: 100%;
+  display: block;
+}
+
+.exp-item {
+  border-right: var(--fontColor) 1px solid;
+  width: 100%;
+  float: left;
+  text-align: right;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 8px;
+  padding-bottom: 10px;
+  transition: var(--hoverTransition);
+}
+
+.exp-item:hover {
+  cursor: pointer;
+  background-color: var(--fontColor);
+  border-right: var(--fontColor) 1px solid;
+  color: black;
+  font-weight: bolder;
+  transition: var(--hoverTransition);
+}
+
+.exp-content {
+  width: 100%;
+  color: greenyellow;
+  height: 100%;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: -10px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+
+
+
+
+/* li {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 30px 18px;
+  text-decoration: none;
+} */
