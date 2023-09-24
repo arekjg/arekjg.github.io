@@ -61,5 +61,16 @@
     bottom: 15px;
 }
 
-
 /* expanded card */
+/* .expanded {
+    transition: var(--hoverTransition);
+    -webkit-transition: var(--hoverTransition);
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    border-radius: 25px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    z-index: 9999;
+} */

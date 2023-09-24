@@ -71,3 +71,16 @@ function renderCards(data) {
 }
 
 renderCards(cardsData);
+
+
+
+
+// $('.card').click(function() {
+//     $(this).toggleClass('expanded');
+
+//     let parent = document.getElementById('grid-container');
+//     let target = document.getElementsByClassName('expanded')[0];
+
+//     parent.appendChild(target);
+
+// });
