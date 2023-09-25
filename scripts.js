@@ -58,7 +58,6 @@ function animate_menu() {
     }
 };
 
-
 // Animate content
 function animate_content() {
     anime({
@@ -79,7 +78,6 @@ function load_content(contentName, flag) {
     contentDiv.className = "";
     contentDiv.classList.add(`${contentName}-container`);
 
-    
     animate_side();
     animate_content();
     currentState = contentName;
@@ -120,5 +118,4 @@ if (typeof expData === 'undefined'){
 
 function load_exp(id) {
     $(".exp-content").html(expData[id]);
-    console.log('kkkk' + id);
 };
