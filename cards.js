@@ -16,7 +16,7 @@ if (typeof cardsData === 'undefined'){
             tech: 'Python, VBA',
             github: '',
             website: '',
-            img: ['https://raw.githubusercontent.com/arekjg/PDF-Describer/master/screens/gui.png?token=GHSAT0AAAAAACEOE46WUPXWVWDYI7NRHCBYZIRXYHA']
+            img: ['<img src="https://drive.google.com/uc?export=view&id=1CEd3jC-t0sEzBsMOxdfDKC3PRZOsxUeJ">']
         },
         {
             projectName: 'TechCreator',
@@ -25,7 +25,8 @@ if (typeof cardsData === 'undefined'){
             status: 'closed',
             tech: 'C#, WPF',
             github: '',
-            website: ''
+            website: '',
+            img: []
         },
         {
             projectName: 'Battleship',
@@ -34,7 +35,8 @@ if (typeof cardsData === 'undefined'){
             status: 'closed',
             tech: 'HTML, CSS, JavaScript',
             github: 'https://github.com/arekjg/battleship_js',
-            website: ''
+            website: '',
+            img: []
         },
         {
             projectName: 'ActivityManager',
@@ -43,7 +45,8 @@ if (typeof cardsData === 'undefined'){
             status: 'in development',
             tech: 'C#, WPF, MS SQL, EFCore',
             github: '',
-            website: ''
+            website: '',
+            img: []
         },
         {
             projectName: 'GitHubStats',
@@ -52,7 +55,8 @@ if (typeof cardsData === 'undefined'){
             status: 'in development',
             tech: 'C#, Python, WebAPI',
             github: '',
-            website: ''
+            website: '',
+            img: []
         }
     ];
 }
@@ -102,10 +106,13 @@ function load_expanded_content(card) {
         <h1 onclick="close_expand()"></h1>
         <h2>${card.projectName}</h2>
         <p>${card.details}</p>
-        <img src="${card.img[0]}">
-    `;
-}
-
+        `;
+    card.img.forEach((image) => {
+        expandedCard.innerHTML += `${image}`;
+    })
+    }
+    
+    // ${card.img[0]}
 function close_expand() {
     const expandedCard = document.getElementById("expanded-card");
     let delay = 700;

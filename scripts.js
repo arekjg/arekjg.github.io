@@ -12,10 +12,10 @@ $(document).ready(function() {
             document.getElementsByTagName("footer")[0].style.visibility = "visible";
             animate_menu();
         }
-    });
+    })
 
     load_content(currentState, false);
-});
+})
 
 // Animate letters in left side panel
 function animate_side() {
@@ -31,8 +31,8 @@ function animate_side() {
         easing: "easeOutBack",
         duration: 1000,
         delay: (el, i) => 100 + 50 * i
-    });
-};
+    })
+}
 
 function animate_menu() {
     const menuWrapper = this.document.getElementById("dropdown-menu");
@@ -43,7 +43,7 @@ function animate_menu() {
             opacity: [1,0],
             easing: "easeOutQuad",
             duration: delay
-        });
+        })
         setTimeout(() => {
             menuWrapper.style.visibility = "hidden";
         }, delay);
@@ -54,9 +54,9 @@ function animate_menu() {
             opacity: [0,1],
             easing: "easeOutQuad",
             duration: delay
-        });
+        })
     }
-};
+}
 
 // Animate content
 function animate_content() {
@@ -67,8 +67,8 @@ function animate_content() {
         easing: "easeOutQuad",
         duration: 1000,
         delay: 200
-    });
-};
+    })
+}
 
 
 function load_content(contentName, flag) {
@@ -86,7 +86,12 @@ function load_content(contentName, flag) {
         const menuCheck = document.getElementById("dot-menu");
         menuCheck.click();
     }
-};
+
+    const expandedCard = document.getElementById("expanded-card");
+    if (expandedCard.style.visibility === "visible") {
+        close_expand();
+    }
+}
 
 
 
@@ -118,4 +123,4 @@ if (typeof expData === 'undefined'){
 
 function load_exp(id) {
     $(".exp-content").html(expData[id]);
-};
+}

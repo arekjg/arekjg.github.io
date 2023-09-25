@@ -3,7 +3,7 @@
   --fontColor: #c2c2c2;
   --hoverColor: #ffffff;
   --hoverTransition: all .7s ease;
-  --tempBorders: red 1px solid;
+  /* --tempBorders: red 1px solid; */
 }
 
 html, body {
