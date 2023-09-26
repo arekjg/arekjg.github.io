@@ -16,7 +16,8 @@ if (typeof cardsData === 'undefined'){
             tech: 'Python, VBA',
             github: '',
             website: '',
-            img: ['<img src="https://drive.google.com/uc?export=view&id=1CEd3jC-t0sEzBsMOxdfDKC3PRZOsxUeJ">']
+            img: ['<img src="https://drive.google.com/uc?export=view&id=1CEd3jC-t0sEzBsMOxdfDKC3PRZOsxUeJ">'],
+            show: true
         },
         {
             projectName: 'TechCreator',
@@ -26,7 +27,8 @@ if (typeof cardsData === 'undefined'){
             tech: 'C#, WPF',
             github: '',
             website: '',
-            img: []
+            img: [],
+            show: true
         },
         {
             projectName: 'Battleship',
@@ -36,17 +38,8 @@ if (typeof cardsData === 'undefined'){
             tech: 'HTML, CSS, JavaScript',
             github: 'https://github.com/arekjg/battleship_js',
             website: '',
-            img: []
-        },
-        {
-            projectName: 'ActivityManager',
-            description: 'WPF app for adding, deleting and viewing data from SQL database.',
-            details: 'long description of an application',
-            status: 'in development',
-            tech: 'C#, WPF, MS SQL, EFCore',
-            github: '',
-            website: '',
-            img: []
+            img: [],
+            show: true
         },
         {
             projectName: 'GitHubStats',
@@ -56,7 +49,19 @@ if (typeof cardsData === 'undefined'){
             tech: 'C#, Python, WebAPI',
             github: '',
             website: '',
-            img: []
+            img: [],
+            show: true
+        },
+        {
+            projectName: 'ActivityManager',
+            description: 'WPF app for adding, deleting and viewing data from SQL database.',
+            details: 'long description of an application',
+            status: 'in development',
+            tech: 'C#, WPF, MS SQL, EFCore',
+            github: '',
+            website: '',
+            img: [],
+            show: false
         }
     ];
 }
@@ -65,19 +70,21 @@ function renderCards(data) {
     const cardContainer = document.getElementsByClassName('projects-container')[0];
 
     data.forEach((card) => {
-        const cardElement = document.createElement('div');
-        cardElement.classList.add('card');
-        cardElement.innerHTML = `
-            <h2>${card.projectName}</h2>
-            <p>${card.description}</p>
-            <p id="tech">Status: <b>${card.status}</b><br>Tech: <b>${card.tech}</b></p>
-            <p id="det"> click to see details </p>
-        `;
-        cardElement.onclick = function () {
-            animate_expanded_card();
-            load_expanded_content(card);
-        };
-        cardContainer.appendChild(cardElement);
+        if (card.show) {
+            const cardElement = document.createElement('div');
+            cardElement.classList.add('card');
+            cardElement.innerHTML = `
+                <h2>${card.projectName}</h2>
+                <p>${card.description}</p>
+                <p id="tech">Status: <b>${card.status}</b><br>Tech: <b>${card.tech}</b></p>
+                <p id="det"> click to see details </p>
+            `;
+            cardElement.onclick = function () {
+                animate_expanded_card();
+                load_expanded_content(card);
+            };
+            cardContainer.appendChild(cardElement);
+        }
     });
 }
 

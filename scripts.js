@@ -114,7 +114,7 @@ if (typeof expData === 'undefined'){
         <ul>
             <li>developing extensions to existing ERP system</li>
             <li>developing new WinForms applications</li>
-            <li>improving existing and writing new SQL functions and stored procedures</li>
+            <li>writing SQL functions and stored procedures</li>
         </ul>
         Most used tech: C#/.NET, MSSQL/TSQL, WinForms, DevExpress
         </p>`
