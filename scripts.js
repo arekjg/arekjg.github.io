@@ -101,13 +101,23 @@ if (typeof expData === 'undefined'){
         `<p>
         <span class="period">06/2017 - 04/2023</span>
         <br>
-        Before my first programming job I have worked for 4 years as a Process Engineer in production company <span class="link"><a href="https://www.tlc.eu/" target="_blank">TLC</a></span>.
-        <br>
-        Some more text....
+        Before my first programming job I have worked for 4 years as a Process Engineer in production company <span class="link"><a href="https://www.tlc.eu/" target="_blank">TLC</a></span>. My responsibilites included among others:
+        <ul>
+            <li>operating Intelligent Production Organizing system</li>
+            <li>preparation and verification of production schemas</li>
+            <li>production planning and improving production processes</li>
+        </ul>
+        This is where I started using my new coding skills to automate some daily tasks. Some of my tools reduced number of mistakes and significantly shortened task execution times.
+        </p>
+        <p>
+        Before that I have worked as a CAD Draftsman in <span class="link"><a href="https://www.adservco.pl/" target="_blank">Adservco</a></span> where I was resposible for creating executive technical documentation of wooden interion designs for US clients.
+        </p>
+        <p>
+        I've also work at my alma mater - <span class="link"><a href="https://www.agh.edu.pl/" target="_blank">AGH in Cracow</a></span>, where I participated in R&D projects for <span class="link"><a href="https://www.aptiv.com/" target="_blank">Aptiv</a></span> company.
         </p>`,
 
         `<p>
-        <span class="job-title">C# Developer @ <span class="link"><a href="https://www.netcom365.pl/">NetCom</a></span></span>
+        <span class="job-title">C# Developer @ <span class="link"><a href="https://www.netcom365.pl/" target="_blank">NetCom</a></span></span>
         <br>
         <span class="period">05/2023 - present</span>
         <br>

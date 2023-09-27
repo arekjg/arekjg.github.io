@@ -33,12 +33,14 @@ if (typeof cardsData === 'undefined'){
         {
             projectName: 'Battleship',
             description: 'Battleship game written in JS, final project in the CS50\'s Introduction to Computer Science course',
-            details: 'long description of an application',
+            details: `Battleship is a commonly known board game - in this case, a browser game. The rules are simple: there are 2 players, each of them has a 10x10 grid. Each player places a fixed number of ships of different sizes. Players make their moves in turns: pick one of opponent\'s cells and hopefully hit the ship. Game is over when one players loses all ships.
+            <br>
+            The game was created as a final project in Harvard's CS50's Introduction to Computer Science course. It was built with HTML, CSS and JavaScript.`,
             status: 'closed',
             tech: 'HTML, CSS, JavaScript',
             github: 'https://github.com/arekjg/battleship_js',
             website: '',
-            img: [],
+            img: ['<img src="https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s1.png">', '<img src="https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s4.png">'],
             show: true
         },
         {
@@ -91,7 +93,6 @@ function renderCards(data) {
 renderCards(cardsData);
 
 
-
 function animate_expanded_card() {
     const expandedCard = document.getElementById("expanded-card");
     let delay = 700;
@@ -106,20 +107,21 @@ function animate_expanded_card() {
 }
 
 function load_expanded_content(card) {
-    console.log(card.projectName + ' ' + card.status);
-    
     const expandedCard = document.getElementById("expanded-card");
     expandedCard.innerHTML = `
         <h1 onclick="close_expand()"></h1>
         <h2>${card.projectName}</h2>
-        <p>${card.details}</p>
-        `;
+        <p>${card.details}</p>`;
+
+    if (card.github !== '') {
+        expandedCard.innerHTML += `<p><span class="link"><a href="${card.github}" target="_blank">GITHUB REPOSITORY</a></span></p>`;
+    }
+
     card.img.forEach((image) => {
-        expandedCard.innerHTML += `${image}`;
+        expandedCard.innerHTML += `<p>${image}</p>`;
     })
     }
     
-    // ${card.img[0]}
 function close_expand() {
     const expandedCard = document.getElementById("expanded-card");
     let delay = 700;

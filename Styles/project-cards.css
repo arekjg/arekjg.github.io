@@ -107,3 +107,8 @@
     margin: auto;
     max-width: 100%;
 }
+
+#expanded-card .link {
+    display: block;
+    text-align: center;
+}

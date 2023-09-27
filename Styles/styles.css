@@ -50,7 +50,7 @@ header {
   margin: 4% 3% 0% 5%;
 }
 #main-content.experience-container {
-  margin: 15% 7% 0% 6%;
+  margin: 8% 7% 0% 6%;
 }
 @media (min-width: 1000px) {
   #main-content.welcome-container {
@@ -62,7 +62,7 @@ header {
     width: 690px;
   }
   #main-content.experience-container {
-    margin: 15% auto 0% auto;
+    margin: 8% auto 0% auto;
     width: 750px;
   }
 }
