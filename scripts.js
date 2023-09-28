@@ -113,7 +113,7 @@ if (typeof expData === 'undefined'){
         Before that I have worked as a CAD Draftsman in <span class="link"><a href="https://www.adservco.pl/" target="_blank">Adservco</a></span> where I was resposible for creating executive technical documentation of wooden interion designs for US clients.
         </p>
         <p>
-        I've also work at my alma mater - <span class="link"><a href="https://www.agh.edu.pl/" target="_blank">AGH in Cracow</a></span>, where I participated in R&D projects for <span class="link"><a href="https://www.aptiv.com/" target="_blank">Aptiv</a></span> company.
+        I've also worked at my alma mater - <span class="link"><a href="https://www.agh.edu.pl/" target="_blank">AGH in Cracow</a></span>, where I participated in R&D projects for <span class="link"><a href="https://www.aptiv.com/" target="_blank">Aptiv</a></span> company.
         </p>`,
 
         `<p>
@@ -124,7 +124,7 @@ if (typeof expData === 'undefined'){
         <ul>
             <li>developing extensions to existing ERP system</li>
             <li>developing new WinForms applications</li>
-            <li>writing SQL functions and stored procedures</li>
+            <li>writing SQL functions and procedures</li>
         </ul>
         Most used tech: C#/.NET, MSSQL/TSQL, WinForms, DevExpress
         </p>`
