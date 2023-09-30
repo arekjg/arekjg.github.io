@@ -16,13 +16,17 @@ if (typeof cardsData === 'undefined'){
             tech: 'Python, VBA',
             github: '',
             website: '',
-            img: ['<img src="https://drive.google.com/uc?export=view&id=1CEd3jC-t0sEzBsMOxdfDKC3PRZOsxUeJ">'],
+            img: ['https://drive.google.com/uc?export=view&id=1CEd3jC-t0sEzBsMOxdfDKC3PRZOsxUeJ'],
             show: true
         },
         {
             projectName: 'TechCreator',
             description: 'WPF app that simplifies creating production schemas for IPOsystem (Intelligent Prodcution Organizing system)',
-            details: 'long description of an application',
+            details: `TechCreator is a WPF app created to simplify creation of technology schemas for IPOsystem (Intelligent Production Organizing system) which I created for my personal use in one of my previous jobs as a Process Engineer. To fully understand what is it for, one must have knowledge of how the IPOsystem works. Long story short, one of the uses of the system is creating product schemas for production. It\'s good for mass production, but in the company where I\'ve been working there was mainly unit production and it made the workflow in IPOsystem much slower.
+            <br><br>
+            The app provides several data grids, forms and vast amount of options to input, edit and delete data. It also allows importing data from xls/xlsx files and folder content. In the end, when the project (production schema) is correctly finished, the app exports all the data to xlsx file with appropriate structure, which can be imported to the IPOsystem, creating a product schema, ready for production.
+            <br><br>
+            `,
             status: 'closed',
             tech: 'C#, WPF',
             github: '',
@@ -40,7 +44,7 @@ if (typeof cardsData === 'undefined'){
             tech: 'HTML, CSS, JavaScript',
             github: 'https://github.com/arekjg/battleship_js',
             website: '',
-            img: ['<img src="https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s1.png">', '<img src="https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s4.png">'],
+            img: ['https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s1.png', 'https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s4.png'],
             show: true
         },
         {
@@ -118,7 +122,7 @@ function load_expanded_content(card) {
     }
 
     card.img.forEach((image) => {
-        expandedCard.innerHTML += `<p>${image}</p>`;
+        expandedCard.innerHTML += `<p><img src="${image}"></p>`;
     })
     }
     
