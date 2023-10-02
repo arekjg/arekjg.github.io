@@ -78,6 +78,10 @@
     border-radius: 25px;
     background-color: rgb(10, 10, 10);
     color: var(--fontColor);
+
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #expanded-card h1:hover {

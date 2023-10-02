@@ -15,7 +15,6 @@ if (typeof cardsData === 'undefined'){
             status: 'closed',
             tech: 'Python, VBA',
             github: '',
-            website: '',
             img: ['https://drive.google.com/uc?export=view&id=1CEd3jC-t0sEzBsMOxdfDKC3PRZOsxUeJ'],
             show: true
         },
@@ -26,35 +25,36 @@ if (typeof cardsData === 'undefined'){
             <br><br>
             The app provides several data grids, forms and vast amount of options to input, edit and delete data. It also allows importing data from xls/xlsx files and folder content. In the end, when the project (production schema) is correctly finished, the app exports all the data to xlsx file with appropriate structure, which can be imported to the IPOsystem, creating a product schema, ready for production.
             <br><br>
-            `,
+            Some screenshots from the app below:`,
             status: 'closed',
             tech: 'C#, WPF',
             github: '',
-            website: '',
-            img: [],
+            img: ['https://drive.google.com/uc?export=view&id=1JWgsu1aoit5zWJpEtFB8jVeXJTUpDohg', 'https://drive.google.com/uc?export=view&id=1nwJY9Bj1L1YoiyQseOMHvhzS4XOVU4pT', 'https://drive.google.com/uc?export=view&id=1558Bo-cApmcMRpi4KTpDpGOJnmBTQ1C7'],
             show: true
         },
         {
             projectName: 'Battleship',
             description: 'Battleship game written in JS, final project in the CS50\'s Introduction to Computer Science course',
-            details: `Battleship is a commonly known board game - in this case, a browser game. The rules are simple: there are 2 players, each of them has a 10x10 grid. Each player places a fixed number of ships of different sizes. Players make their moves in turns: pick one of opponent\'s cells and hopefully hit the ship. Game is over when one players loses all ships.
-            <br>
+            details: `Battleship is a commonly known board game - in this case, a browser game. The rules are simple: there are 2 players, each of them has a 10x10 grid. Each player places a fixed number of ships of different sizes. Players make their moves in turns: pick one of opponent\'s cells and hopefully hit the ship. Game is over when one player loses all ships.
+            <br><br>
             The game was created as a final project in Harvard's CS50's Introduction to Computer Science course. It was built with HTML, CSS and JavaScript.`,
             status: 'closed',
             tech: 'HTML, CSS, JavaScript',
             github: 'https://github.com/arekjg/battleship_js',
-            website: '',
             img: ['https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s1.png', 'https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s4.png'],
             show: true
         },
         {
             projectName: 'GitHubStats',
-            description: 'Console .NET app that communicates with GitHub API and provides user statistics to be included in "readme" file',
-            details: 'long description of an application',
+            description: 'Console .NET app that communicates with GitHub API and provides user statistics to be included in README file',
+            details: `GitHubStats is a console .NET app that communicates with GitHub API in order to get some user data like name, date of joining, number of public and private repositories, share of programming languages used in all (public and private) repositories, number of contributions per year, etc.
+            <br><br>
+            Then, acquired data is used to create graphs using Python library Matplotlib. Created picture can be used in README file in GitHub profile.
+            <br><br>
+            The app is currently under development.`,
             status: 'in development',
-            tech: 'C#, Python, WebAPI',
+            tech: 'C#, Python',
             github: '',
-            website: '',
             img: [],
             show: true
         },
@@ -65,7 +65,6 @@ if (typeof cardsData === 'undefined'){
             status: 'in development',
             tech: 'C#, WPF, MS SQL, EFCore',
             github: '',
-            website: '',
             img: [],
             show: false
         }
@@ -82,7 +81,7 @@ function renderCards(data) {
             cardElement.innerHTML = `
                 <h2>${card.projectName}</h2>
                 <p>${card.description}</p>
-                <p id="tech">Status: <b>${card.status}</b><br>Tech: <b>${card.tech}</b></p>
+                <p id="tech">Status: <strong>${card.status}</strong><br>Tech: <strong>${card.tech}</strong></p>
                 <p id="det"> click to see details </p>
             `;
             cardElement.onclick = function () {
@@ -99,8 +98,12 @@ renderCards(cardsData);
 
 function animate_expanded_card() {
     const expandedCard = document.getElementById("expanded-card");
+    const sideContent = document.getElementById("side-content");
+    const mainContent = document.getElementById("main-content");
     let delay = 700;
-    expandedCard.style.visibility = "visible";        
+    expandedCard.style.visibility = "visible";
+    sideContent.style.visibility = "hidden";
+    mainContent.style.visibility = "hidden";
     anime({
         targets: '#expanded-card',
         scale: [0,1],
@@ -128,10 +131,14 @@ function load_expanded_content(card) {
     
 function close_expand() {
     const expandedCard = document.getElementById("expanded-card");
+    const sideContent = document.getElementById("side-content");
+    const mainContent = document.getElementById("main-content");
     let delay = 700;
     expandedCard.style.transition = "cubic-bezier(0, 2.28, 0.95, 0.69) 5s";
     expandedCard.style.webkitTransition = "cubic-bezier(0, 2.28, 0.95, 0.69) 5s";
     expandedCard.style.visibility = "hidden";
+    sideContent.style.visibility = "visible";
+    mainContent.style.visibility = "visible";
     anime({
         targets: '#expanded-card',
         scale: [1,0],
