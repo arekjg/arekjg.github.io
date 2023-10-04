@@ -4,11 +4,10 @@
     position: sticky;
     top: 0;
     overflow-y: scroll;
-    /* width */
 }
 
 #main-column::-webkit-scrollbar, #expanded-card::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
     margin-top: 20px;
 }
   
@@ -22,7 +21,7 @@
   
 /* Handle */
 #main-column::-webkit-scrollbar-thumb, #expanded-card::-webkit-scrollbar-thumb {
-    background: rgb(7, 7, 7); 
+    background: rgb(60, 75, 84); 
     border-radius: 10px;
 }
   
@@ -30,8 +29,3 @@
 #main-column::-webkit-scrollbar-thumb:hover, #expanded-card::-webkit-scrollbar-thumb:hover {
     background: #009eb3; 
 }
-
-  
-/*
-https://codepen.io/tholman/pen/DgOpWz
-*/

@@ -67,6 +67,16 @@ if (typeof cardsData === 'undefined'){
             github: '',
             img: [],
             show: false
+        },
+        {
+            projectName: 'Project Management App',
+            description: 'Full-stack web application for project and task management.',
+            details: 'long description of an application',
+            status: 'in development',
+            tech: '.NET Core, React.js, MSSQL, EFCore',
+            github: '',
+            img: [],
+            show: true
         }
     ];
 }
