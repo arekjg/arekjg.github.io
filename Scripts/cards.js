@@ -40,7 +40,7 @@ if (typeof cardsData === 'undefined'){
             The game was created as a final project in Harvard's CS50's Introduction to Computer Science course. It was built with HTML, CSS and JavaScript.`,
             status: 'closed',
             tech: 'HTML, CSS, JavaScript',
-            github: 'https://github.com/arekjg/battleship_js',
+            github: [['GITHUB REPOSITORY', 'https://github.com/arekjg/battleship_js']],
             img: ['https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s1.png', 'https://raw.githubusercontent.com/arekjg/battleship_js/main/screens/s4.png'],
             show: true
         },
@@ -54,7 +54,7 @@ if (typeof cardsData === 'undefined'){
             The app is currently under development.`,
             status: 'in development',
             tech: 'C#, Python',
-            github: '',
+            github: [['GITHUB REPOSITORY', 'https://github.com/arekjg/GitHubStats']],
             img: [],
             show: true
         },
@@ -71,10 +71,10 @@ if (typeof cardsData === 'undefined'){
         {
             projectName: 'Project Management App',
             description: 'Full-stack web application for project and task management.',
-            details: 'long description of an application',
+            details: `Project Management App is a full-stack application I started developing recently. It consists of ASP.NET Web API, MS SQL database and React.js front-end. I've created it mostly for learning purposes, but also to have a tool to manage my personal projects and workflow. The app is still in its initial stage of development but feel free to check it out in the following GitHub respositories:`,
             status: 'in development',
             tech: '.NET Core, React.js, MSSQL, EFCore',
-            github: '',
+            github: [['GITHUB REPOSITORY: BACK-END', 'https://github.com/arekjg/ProjectManagementApi'], ['GITHUB REPOSITORY: FRONT-END', '#']],
             img: [],
             show: true
         }
@@ -130,8 +130,10 @@ function load_expanded_content(card) {
         <h2>${card.projectName}</h2>
         <p>${card.details}</p>`;
 
-    if (card.github !== '') {
-        expandedCard.innerHTML += `<p><span class="link"><a href="${card.github}" target="_blank">GITHUB REPOSITORY</a></span></p>`;
+    if (card.github.length > 0) {
+        for (let i = 0; i < card.github.length; i++) {
+            expandedCard.innerHTML += `<p><span class="link"><a href="${card.github[i][1]}" target="_blank">${card.github[i][0]}</a></span></p>`
+        }
     }
 
     card.img.forEach((image) => {
