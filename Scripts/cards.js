@@ -11,10 +11,10 @@ if (typeof cardsData === 'undefined'){
             <br><br>
             PDF-Describer combines Python code (for GUI and functionality) with some VBA macros that are automatically ran during app's execution.
             <br>
-            Because the application has been sold, the code cannot be shared.`,
+            Because the application has been sold, the code cannot be shared, but you a longer description is available in a gist linked below.`,
             status: 'closed',
             tech: 'Python, VBA',
-            github: '',
+            github: [['GITHUB GIST', 'https://gist.github.com/arekjg/dcb37ccdeba6e83bd2de94b6d1f8e986']],
             img: ['https://drive.google.com/uc?export=view&id=1CEd3jC-t0sEzBsMOxdfDKC3PRZOsxUeJ'],
             show: true
         },
@@ -46,16 +46,16 @@ if (typeof cardsData === 'undefined'){
         },
         {
             projectName: 'GitHubStats',
-            description: 'Console .NET app that communicates with GitHub API and provides user statistics to be included in README file',
-            details: `GitHubStats is a console .NET app that communicates with GitHub API in order to get some user data like name, date of joining, number of public and private repositories, share of programming languages used in all (public and private) repositories, number of contributions per year, etc.
+            description: 'Web app that communicates with GitHub API and provides user statistics in form of charts to be included in README file',
+            details: `GitHubStats started as a console .NET app, but during creation process it evolved into a full-stack web app built with ASP.NET for back-end and React.js for user interface. The application communicates with GitHub API in order to retrieve some user data like name, date of joining, number of public and private repositories, share of programming languages used in all (public and private) repositories, number of contributions per year, etc.
             <br><br>
-            Then, acquired data is used to create graphs using Python library Matplotlib. Created picture can be used in README file in GitHub profile.
+            Then, acquired data is used to create graphs using Canvas.js library. Created pictures can be used in README file in GitHub profile.
             <br><br>
-            The app is currently under development.`,
+            Please note, that the app is still under development and I'm continuously trying to improve it and find/fix all bugs.`,
             status: 'in development',
-            tech: 'C#, Python',
-            github: [['GITHUB REPOSITORY', 'https://github.com/arekjg/GitHubStats']],
-            img: [],
+            tech: 'ASP.NET, React.js',
+            github: [['API: GITHUB REPOSITORY', 'https://github.com/arekjg/GitHubStatsApi'], ['UI: GITHUB REPOSITORY', 'https://github.com/arekjg/github-stats-ui']],
+            img: ['https://raw.githubusercontent.com/arekjg/github-stats-ui/master/public/img/ui2.png', 'https://raw.githubusercontent.com/arekjg/github-stats-ui/master/public/img/ui3.png'],
             show: true
         },
         {
@@ -76,7 +76,7 @@ if (typeof cardsData === 'undefined'){
             tech: '.NET Core, React.js, MSSQL, EFCore',
             github: [['GITHUB REPOSITORY: BACK-END', 'https://github.com/arekjg/ProjectManagementApi'], ['GITHUB REPOSITORY: FRONT-END', '#']],
             img: [],
-            show: true
+            show: false
         }
     ];
 }
