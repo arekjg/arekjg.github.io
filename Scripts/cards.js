@@ -1,6 +1,16 @@
 if (typeof cardsData === 'undefined'){
     var cardsData = [
         {
+            projectName: 'TeslaRentingApp',
+            description: 'ASP.NET/React web application for booking cars in a fictional rental company.',
+            details: `This is a car renting web application that simplifies the process of reserbing a Tesla car. With this app, users can choose their pick-up and return dates, pick-up and return locations (which can be the same or different) and browse from a range of 10 Tesla car models.`,
+            status: 'in development',
+            tech: 'ASP.NET, React.js, MSSQL, EF',
+            github: [['GITHUB REPOSITORY', 'https://github.com/arekjg/TeslaRentingApp']],
+            img: ['https://raw.githubusercontent.com/arekjg/TeslaRentingApp/master/img/screen1.PNG', 'https://raw.githubusercontent.com/arekjg/TeslaRentingApp/master/img/screen2.PNG', 'https://raw.githubusercontent.com/arekjg/TeslaRentingApp/master/img/screen3.PNG'],
+            show: true
+        },        
+        {
             projectName: 'PDF-Describer',
             description: 'Python app that takes data from CSV file and inserts it to PDF file',
             details: `PDF-Describer is a simple Python app, created to automatize some tasks that I often performed in one of my previous jobs as a Process Engineer.
@@ -63,7 +73,7 @@ if (typeof cardsData === 'undefined'){
             description: 'WPF app for adding, deleting and viewing data from SQL database.',
             details: 'long description of an application',
             status: 'in development',
-            tech: 'C#, WPF, MS SQL, EFCore',
+            tech: 'C#, WPF, MS SQL, EF',
             github: '',
             img: [],
             show: false
@@ -73,7 +83,7 @@ if (typeof cardsData === 'undefined'){
             description: 'Full-stack web application for project and task management.',
             details: `Project Management App is a full-stack application I started developing recently. It consists of ASP.NET Web API, MS SQL database and React.js front-end. I've created it mostly for learning purposes, but also to have a tool to manage my personal projects and workflow. The app is still in its initial stage of development but feel free to check it out in the following GitHub respositories:`,
             status: 'in development',
-            tech: '.NET Core, React.js, MSSQL, EFCore',
+            tech: 'ASP.NET, React.js, MSSQL, EF',
             github: [['GITHUB REPOSITORY: BACK-END', 'https://github.com/arekjg/ProjectManagementApi'], ['GITHUB REPOSITORY: FRONT-END', '#']],
             img: [],
             show: false
