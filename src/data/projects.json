@@ -29,7 +29,7 @@
     "id": 2,
     "name": "PDF Describer",
     "type": "Desktop app",
-    "description": "Desktop app that takes data from CSV file and inserts it to PDF file. Made with Python, uses some VBA Excel macros. I've made it to automate some daily tasks in my previous job (unrelated to programming). It is still used in that company, save about 50 man-hours per month",
+    "description": "Desktop app that takes data from CSV file and inserts it to PDF file. Made with Python, uses some VBA Excel macros. I've made it to automate some daily tasks in my previous job (unrelated to programming). It is still used in that company and saves about 50 man-hours per month",
     "stack": ["python", "vba"],
     "img": ["pdf-describer.png"],
     "urls": {
@@ -40,6 +40,19 @@
   },
   {
     "id": 3,
+    "name": "Project Management API",
+    "type": "Web API",
+    "description": "API for project management application, still in development. I plan to expand it with more endpoints and develop a UI in further future",
+    "stack": ["net", "mssql"],
+    "img": ["pm.png"],
+    "urls": {
+      "repo": "https://github.com/arekjg/ProjectManagementApi",
+      "demo": "",
+      "gist": ""
+    }
+  },
+  {
+    "id": 4,
     "name": "Battleship",
     "type": "Web app",
     "description": "Battleship game created with HTML, CSS and JavaScript. Final project in the 'CS50's Introduction to Computer Science' course",
@@ -48,19 +61,6 @@
     "urls": {
       "repo": "https://github.com/arekjg/battleship_js",
       "demo": "https://arekjg.github.io/battleship_js/",
-      "gist": ""
-    }
-  },
-  {
-    "id": 4,
-    "name": "Project Management API",
-    "type": "Web API",
-    "description": "API for project management",
-    "stack": ["net", "mssql"],
-    "img": ["pm.png"],
-    "urls": {
-      "repo": "https://github.com/arekjg/ProjectManagementApi",
-      "demo": "",
       "gist": ""
     }
   }

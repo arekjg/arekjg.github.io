@@ -103,12 +103,16 @@ html {
 }
 
 #about {
-  padding-top: 35vh;
+  padding-top: 32vh;
   padding-bottom: 40vh;
   width: 60%;
   margin-right: auto;
   margin-left: auto;
-  text-align: left;
+  text-align: justify;
+}
+
+.p-center {
+  text-align: center;
 }
 
 #projects {
@@ -164,7 +168,7 @@ h1 {
 }
 .project-info .description {
   grid-area: 3 / 1 / 4 / 3;
-  text-align: left;
+  text-align: justify;
   padding: 30px;
   background-color: var(--project-bg-color);
   margin-top: 3px;
@@ -229,6 +233,26 @@ h1 {
     top: 0;
     -ms-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    text-align: center;
+  }
+
+  .nav-menu {
+    padding: 0;
+  }
+
+  .nav-menu:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 370px){
+  .nav-item {
+    margin: 10px;
   }
 }
 
