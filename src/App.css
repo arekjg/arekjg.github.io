@@ -78,7 +78,6 @@ html {
 }
 
 .content {
-  /* width: 75%; */
   max-width: 950px;
   margin-left: auto;
   margin-right: auto;
@@ -87,28 +86,30 @@ html {
 }
 
 #home {
-  padding-top: 35vh;
-  padding-bottom: 50vh;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
 #home-1 {
   font-size: 48px;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
 #home-2 {
   font-size: 20px;
-  margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #about {
-  padding-top: 32vh;
-  padding-bottom: 40vh;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
   width: 60%;
   margin-right: auto;
   margin-left: auto;
   text-align: justify;
+  font-size: 20px;
 }
 
 .p-center {

@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
       <ul className="nav-menu">
-        <li className="nav-item" onClick={() => handleClickScroll("root")}>
+        <li className="nav-item" onClick={() => handleClickScroll("home")}>
           HOME
         </li>
         <li className="nav-item" onClick={() => handleClickScroll("about")}>
