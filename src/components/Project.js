@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { StackIcon } from "./Icons";
 import ProjectLinks from "./ProjectLinks";
 
-const Project = ({
-  name,
-  type,
-  description,
-  stack,
-  img,
-  urls
-}) => {
+const Project = ({ name, type, description, stack, img, urls }) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+    });
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [isIntersecting]);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      document.querySelectorAll(".project-info div").forEach((el) => {
+        el.classList.add("slide-in");
+      });
+      document.querySelectorAll(".project-img").forEach((el) => {
+        el.classList.add("slide-in");
+      });
+    }
+  }, [isIntersecting]);
+
   return (
-    <div className="project">
+    <div className="project" ref={ref}>
       <div className="project-info">
         <div className="name">{name}</div>
         <div className="type">{type}</div>
@@ -27,8 +42,7 @@ const Project = ({
       </div>
 
       <div className="project-img">
-          {img && <img src={`./assets/ss/${img[0]}`} alt="" />}
-
+        {img && <img src={`./assets/ss/${img[0]}`} alt="" />}
       </div>
     </div>
   );

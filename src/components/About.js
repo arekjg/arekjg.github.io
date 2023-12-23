@@ -14,20 +14,20 @@ const About = () => {
           made a career change and started my first programming job.
         </p>
         <p className="p-center">Stack I use on a daily basis:</p>
-        <p className="p-center">
+        <div className="p-center">
           <StackIcon name={"net"} />
           <StackIcon name={"mssql"} />
-        </p>
+        </div>
 
         <p className="p-center">Stack I have some experience with:</p>
 
-        <p className="p-center">
+        <div className="p-center">
           <StackIcon name={"html"} />
           <StackIcon name={"css"} />
           <StackIcon name={"js"} />
           <StackIcon name={"react"} />
           <StackIcon name={"python"} />
-        </p>
+        </div>
       </div>
     </div>
   );
