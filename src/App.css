@@ -55,7 +55,7 @@ html {
 }
 
 .stack-icon {
-  height: 30px;
+  height: 35px;
   margin-right: 5px;
   margin-left: 5px;
 }
@@ -101,6 +101,11 @@ html {
   margin-bottom: 20px;
 }
 
+.home {
+  transform: translateY(-80%);
+  opacity: 0;
+}
+
 #about {
   display: grid;
   place-items: center;
@@ -112,7 +117,14 @@ html {
   font-size: 20px;
 }
 
+.about {
+  transform: translateY(-80%);
+  opacity: 0;
+}
+
 .p-center {
+  transform: translateY(80%);
+  opacity: 0;
   text-align: center;
 }
 
@@ -197,12 +209,16 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
-.project-img, .stack {
+.project-img,
+.stack {
   transform: translateY(80%);
   opacity: 0;
 }
 
-.name, .type, .urls, .description {
+.name,
+.type,
+.urls,
+.description {
   transform: translateY(-80%);
   opacity: 0;
 }
@@ -266,7 +282,7 @@ h1 {
   }
 }
 
-@media (max-width: 370px){
+@media (max-width: 370px) {
   .nav-item {
     margin: 10px;
   }

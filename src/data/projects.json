@@ -5,7 +5,7 @@
     "type": "Web app",
     "description": "Web application for booking in a car rental company. Choose one of 10 available Tesla models and pick/return them in one of 4 locations in Mallorca. The application uses MSSQL database, data is fetched with ASP.NET Web API and displayed in UI created with React.js",
     "stack": ["net", "mssql", "html", "css", "js", "react"],
-    "img": ["tesla1.png", "tesla2.png"],
+    "img": "tesla1.png",
     "urls": {
       "repo": "https://github.com/arekjg/TeslaRentingApp",
       "demo": "",
@@ -18,7 +18,7 @@
     "type": "Web app",
     "description": "Web application for creating your own GitHub statistics image. UI created with React.js communicates with GitHub API via ASP.NET backend",
     "stack": ["net", "html", "css", "js", "react"],
-    "img": ["githubstats.png"],
+    "img": "githubstats.png",
     "urls": {
       "repo": "https://github.com/arekjg/GitHubStats",
       "demo": "",
@@ -31,7 +31,7 @@
     "type": "Desktop app",
     "description": "Desktop app that takes data from CSV file and inserts it to PDF file. Made with Python, uses some VBA Excel macros. I've made it to automate some daily tasks in my previous job (unrelated to programming). It is still used in that company and saves about 50 man-hours per month",
     "stack": ["python", "vba"],
-    "img": ["pdf-describer.png"],
+    "img": "pdf-describer.png",
     "urls": {
       "repo": "",
       "demo": "",
@@ -44,7 +44,7 @@
     "type": "Web API",
     "description": "API for project management application, still in development. I plan to expand it with more endpoints and develop a UI in further future",
     "stack": ["net", "mssql"],
-    "img": ["pm.png"],
+    "img": "pm.png",
     "urls": {
       "repo": "https://github.com/arekjg/ProjectManagementApi",
       "demo": "",
@@ -57,7 +57,7 @@
     "type": "Web app",
     "description": "Battleship game created with HTML, CSS and JavaScript. Final project in the 'CS50's Introduction to Computer Science' course",
     "stack": ["html", "css", "js"],
-    "img": ["battleship.png"],
+    "img": "battleship.png",
     "urls": {
       "repo": "https://github.com/arekjg/battleship_js",
       "demo": "https://arekjg.github.io/battleship_js/",
