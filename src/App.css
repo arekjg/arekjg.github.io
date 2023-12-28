@@ -55,7 +55,6 @@ html {
 }
 
 .stack-icon {
-  height: 35px;
   margin-right: 5px;
   margin-left: 5px;
 }
@@ -268,7 +267,7 @@ h1 {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .header {
     text-align: center;
   }
@@ -279,6 +278,14 @@ h1 {
 
   .nav-menu:last-child {
     margin-right: 0;
+  }
+
+  #home-1 {
+    font-size: 36px;
+  }
+
+  #about, #home-2 {
+    font-size: 16px;
   }
 }
 

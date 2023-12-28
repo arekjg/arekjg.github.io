@@ -60,19 +60,21 @@ export const MailIcon = () => (
   </div>
 );
 
-export const StackIcon = ({ name }) => (
+export const StackIcon = ({ name, height }) => (
   <div className="icon-wrapper">
     <img
       src={`./assets/icons/normal/${name}.png`}
       className="stack-icon icon-normal"
       title={name.toUpperCase()}
       alt=""
-    />
+      style={{height: `${height}px`}}
+      />
     <img
       src={`./assets/icons/hover/${name}.png`}
       className="stack-icon icon-hover"
       title={name.toUpperCase()}
       alt=""
+      style={{height: `${height}px`}}
     />
   </div>
 );

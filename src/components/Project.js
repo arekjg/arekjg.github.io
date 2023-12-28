@@ -36,7 +36,7 @@ const Project = ({ name, type, description, stack, img, urls }) => {
         </div>
         <div className={`stack ${isIntersecting ? "slide-in" : ""}`}>
           {stack.map((i) => (
-            <StackIcon key={i} name={i} />
+            <StackIcon key={i} name={i} height={35} />
           ))}
         </div>
       </div>

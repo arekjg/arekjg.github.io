@@ -5,6 +5,8 @@ const About = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef();
 
+  const iconHeight = 45;
+
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       setIsIntersecting(entry.isIntersecting);
@@ -37,8 +39,8 @@ const About = () => {
           Stack I use on a daily basis:
         </p>
         <div className={`p-center ${isIntersecting ? "slide-in" : ""}`}>
-          <StackIcon name={"net"} />
-          <StackIcon name={"mssql"} />
+          <StackIcon name={"net"} height={iconHeight} />
+          <StackIcon name={"mssql"} height={iconHeight} />
         </div>
 
         <p className={`p-center ${isIntersecting ? "slide-in" : ""}`}>
@@ -46,11 +48,11 @@ const About = () => {
         </p>
 
         <div className={`p-center ${isIntersecting ? "slide-in" : ""}`}>
-          <StackIcon name={"html"} />
-          <StackIcon name={"css"} />
-          <StackIcon name={"js"} />
-          <StackIcon name={"react"} />
-          <StackIcon name={"python"} />
+          <StackIcon name={"html"} height={iconHeight} />
+          <StackIcon name={"css"} height={iconHeight} />
+          <StackIcon name={"js"} height={iconHeight} />
+          <StackIcon name={"react"} height={iconHeight} />
+          <StackIcon name={"python"} height={iconHeight} />
         </div>
       </div>
     </div>
