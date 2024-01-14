@@ -1,30 +1,15 @@
 import React from "react";
 
-const ProjectLinks = ({ urls }) => {
+const ProjectLinks = ({ url }) => {
   return (
-    <>
-      {urls.repo && (
-        <a href={urls.repo} target="_blank" rel="noreferrer">
-          <div className="link-container">
-            <span>CODE</span>
-          </div>
-        </a>
-      )}
-      {urls.demo && (
-        <a href={urls.demo} target="_blank" rel="noreferrer">
-          <div className="link-container">
-            <span>DEMO</span>
-          </div>
-        </a>
-      )}
-      {urls.gist && (
-        <a href={urls.gist} target="_blank" rel="noreferrer">
-          <div className="link-container">
-            <span>GIST</span>
-          </div>
-        </a>
-      )}
-    </>
+    <a
+      href={url.url}
+      target="_blank"
+      rel="noreferrer"
+      className="link-container"
+    >
+      <span>{url.caption}</span>
+    </a>
   );
 };
 

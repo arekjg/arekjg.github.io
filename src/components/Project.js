@@ -29,14 +29,16 @@ const Project = ({ name, type, description, stack, img, urls }) => {
         <div className={`name ${isIntersecting ? "slide-in" : ""}`}>{name}</div>
         <div className={`type ${isIntersecting ? "slide-in" : ""}`}>{type}</div>
         <div className={`urls ${isIntersecting ? "slide-in" : ""}`}>
-          <ProjectLinks urls={urls} />
+          {urls.map((url, index) => (
+            <ProjectLinks key={index} url={url} />
+          ))}
         </div>
         <div className={`description ${isIntersecting ? "slide-in" : ""}`}>
           {description}
         </div>
         <div className={`stack ${isIntersecting ? "slide-in" : ""}`}>
-          {stack.map((i) => (
-            <StackIcon key={i} name={i} height={35} />
+          {stack.map((name, index) => (
+            <StackIcon key={index} name={name} height={35} />
           ))}
         </div>
       </div>

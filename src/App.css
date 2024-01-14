@@ -295,6 +295,15 @@ h1 {
   }
 }
 
+.link-container span {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .link-container {
   background-color: var(--text-color);
   text-align: center;
@@ -310,17 +319,11 @@ h1 {
   bottom: -50%;
 }
 
-.link-container span {
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.link-container:hover {
+  background-color: var(--project-bg-color);
 }
 
 .link-container:hover {
-  background-color: var(--project-bg-color);
   color: var(--text-color);
 }
 
